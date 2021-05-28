@@ -8,7 +8,7 @@ document.querySelector('.score').textContent = 15;
 document.querySelector('.guess').value = 20;
 console.log(document.querySelector('.guess').value); */
 
-const number = Math.floor(Math.random() * 20) + 1;
+let number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 let displayMessage = function (message) {
@@ -37,6 +37,7 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 document.querySelector('.again').addEventListener('click', function () {
+  number = Math.trunc(Math.random() * 20) + 1;
   document.querySelector('.number').textContent = '?';
   document.querySelector('.score').textContent = 20;
   score = 20;
